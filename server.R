@@ -1,5 +1,7 @@
 library(datasets) 
 library(caret)
+library(randomForest)
+library(e1071)
 data(iris)
 model <-  train(Species ~ ., data = iris, method="rf", trControl=trainControl(method='cv',number=4))
 
